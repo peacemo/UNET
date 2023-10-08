@@ -1,3 +1,12 @@
+'''
+ # @ Author: Chen Xueqiang
+ # @ Create Time: 2023-10-06 11:46:00
+ # @ Modified by: Chen Xueqiang
+ # @ Modified time: 2023-10-08 10:49:37
+ # @ Description: UNET from scratch. 
+ '''
+
+
 import torch 
 import torch.nn as nn 
 import torchvision.transforms.functional as TF
@@ -76,11 +85,11 @@ class UNET(nn.Module):
 
         return self.final_conv(x)
         
-def test():
-    x = torch.randn((3, 1, 161, 161))
-    unet = UNET(1, 1)
-    preds = unet(x)
-    print(f'{x.shape=}')
-    print(f'{preds.shape=}')
+# def test():
+#     x = torch.randn((3, 1, 161, 161))
+#     unet = UNET(1, 1)
+#     preds = unet(x)
+#     print(f'{x.shape=}')
+#     print(f'{preds.shape=}')
 
-test()
+# test()
